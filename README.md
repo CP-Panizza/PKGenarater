@@ -8,5 +8,5 @@ err := pk.Init()
 if err != nil {
 	panic(err)
 }
-```go
+```
 	
