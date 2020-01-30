@@ -1,7 +1,6 @@
 package pk
 
 import (
-	. "../pkg/Panizza.v8"
 	"database/sql"
 	"fmt"
 	"strconv"
@@ -85,6 +84,7 @@ func (this *PKGenarater) _returnKey() {
 	this.flag <- 0
 }
 
+
 func (this *PKGenarater) GetPK() (string, error) {
 	this._getKey()
 	defer this._returnKey()
@@ -117,13 +117,4 @@ func (this *PKGenarater) GetPK() (string, error) {
 	return gpk, nil
 }
 
-//@Been(name="pk")
-func PK_Been() *PKGenarater {
-	pk := NewPKGenarater("user", 10, "id", "user")
-	Inject(pk)
-	err := pk.Init()
-	if err != nil {
-		panic(err)
-	}
-	return pk
-}
+
