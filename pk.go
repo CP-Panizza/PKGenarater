@@ -1,4 +1,4 @@
-package pk
+package PKGenarater
 
 import (
 	"database/sql"
